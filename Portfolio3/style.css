@@ -1,0 +1,395 @@
+*{
+    padding: 0;margin: 0;box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    overflow-x: hidden;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* Nav section */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    position: relative;
+    background-color: rgba(56, 50, 50, 0.616);
+}
+.links{
+    display: flex;
+    gap: 2rem;
+}
+.logo{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: black;
+}
+.dark .logo{
+    color: white;
+}
+.menu{
+    display: none;
+    width: 2rem;
+}
+.dark a{
+    color: white;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+a:hover{
+    color: white;
+    transition: .5s;
+}
+.dark a:hover{
+    color: wheat;
+}
+@media only screen and (max-width:600px){
+   .menu{
+    display: block;
+   }
+   .links{
+    position: absolute;
+    top: 100%;
+    flex-direction: row;
+    background-color: blue;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    /* right: 1rem;
+    overflow: hidden;
+    transition: 1s;
+    height: auto; */
+    right: 0.5rem;
+    transition: .5s ease-out;
+}
+a:hover{
+    color: black;
+}
+.links.hide{
+    right: -100%;
+   }
+}
+/* End of Nav section */
+
+/* THEME SWITCHING */
+.dark{
+    background-color: rgb(51, 51, 51);
+    color: white;
+}
+.right{
+    display: flex;
+    gap: 2rem;
+}
+.dark .theme-switcher{
+    background: #000;
+    color: white;
+}
+/* End of theme switching */
+
+/* Home */
+.home_text{
+    margin: 12% 15%;
+}
+.hm_p_1{
+    color: rgb(2, 2, 124);
+    font-weight: 700;
+    font-size: 20px;
+}
+.hm_p_2{
+    color: black;
+    font-weight: 900;
+    font-size: 40px;
+}
+.dark .hm_p_2 {
+    color: white;
+}
+.hm_p_3{
+    color: black;
+    margin-top: 5px;
+}
+.dark .hm_p_3{
+    color: white;
+}
+.btn_hm button{
+    border: none;
+    padding: 7px 10px;
+    color: white;
+    margin-top: 10px;
+    font-weight: 600;
+    background-color: rgb(197, 101, 197);
+}
+@keyframes slidein{
+    from{
+        transform: translateX(-300px);
+    }
+    to{
+        transform: translateX(0);
+
+    }
+}
+.slidein{
+    animation-name:slidein ;
+    animation-duration: 2s;
+    animation-timing-function: ease-in ;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
+@media (max-width:600px){
+    .hm_p_2{
+        font-size: 30px;
+    }
+    .hm_p_3{
+        font-size: 13px;
+    }
+    .home_text{
+        margin: 12% 5%;
+    }
+}
+
+/* About */
+.about,.skills{
+    color: black;
+    display: flex;
+    align-items: center;
+}
+.dark .about{
+    color: white;
+}
+.about_body,.skill_body{
+    margin: 0 13rem;
+}
+.about_head{
+    border-bottom: 7px solid rgb(107, 107, 221);
+    font-size: 30px;
+    width: 8%;
+}
+.about_text{
+    margin:3rem 1rem;
+    padding: 10px;
+    font-style: oblique;
+    font-size: larger;
+}
+.abt_img{
+    width: 20%;
+    height: 10%;
+    object-fit: contain;
+    background-size: contain;
+    margin: 8% 5%;
+    box-shadow: 1px 2px 3px 3px black;
+}
+@media (max-width:600px){
+    .about_body{
+    margin: 0 3rem;    
+    }
+    .about_head{
+        width: 17%;
+    }
+    .about_text{
+        font-size: x-small;
+    }
+}
+
+/* Skills */
+.skills{
+    display: flex;
+}
+.dark .skills{
+    color: white;
+}
+.skill_head{
+    border-bottom: 7px solid rgb(107, 107, 221);
+    font-size: 30px;
+    width: 12%;
+    margin-top: 20%;
+}
+.skill_body{
+    margin-bottom: 20%;
+}
+.skil_img{
+    display: flex;
+    gap: 3rem;
+}
+.js_skl{
+    width: 15%;
+}
+.js_skl_html{
+    width: 15%;
+}
+.js_skl_java{
+    width: 15%;
+}
+.js_skl_python{
+    width: 15%;
+    height: 5pc;
+}
+.js_skl_c{
+    width: 15%;
+}
+@media (max-width:600px){
+    .skill_body{
+    margin: 0 2rem;    
+    }
+    .skill_head{
+        width: 17%;
+    }
+    .about_text{
+        font-size: x-small;
+    }
+    .skil_img{
+        gap: 1.5rem;
+    }
+}
+
+/* work */
+
+.work{
+    display: block;
+}
+.work_head{
+    border-bottom: 7px solid rgb(107, 107, 221);
+    font-size: 30px;
+    width: 5%;
+    margin-left: 15%;
+}
+.box_wrap{
+    background-color: black;
+    width: 80%;
+    border-radius:  30px;
+    height: 60vh;
+    display: flex;
+    margin:  10% 15% 5%;
+    align-items: center;
+    color: white;
+    padding: 10px;
+}
+.boxes{
+    margin-left: 15px;
+    font-size: 12px;
+}
+.box_img{
+    display: block;
+}
+.box_imgs{
+    width: 70%;
+    object-fit: contain;
+    margin-left: 20%;
+}
+.box_img_text{
+    margin-left: 20%;
+}
+.box_wraps{
+    background-color: black;
+    width: 80%;
+    border-radius:  30px;
+    height: 60vh;
+    display: flex;
+    margin:  0% 15% 0% ;
+    align-items: center;
+    color: white;
+    padding: 10px;
+}
+.box_wrapss{
+    background-color: black;
+    width: 80%;
+    border-radius:  30px;
+    height: 60vh;
+    display: flex;
+    margin:  5% 15% 0% ;
+    align-items: center;
+    color: white;
+    padding: 10px;
+}
+.live_btn{
+    border: none;
+    padding: 7px 10px;
+    margin-top: 20%;
+    font-weight: 600;
+    background-color: rgb(197, 101, 197);
+}
+@media only screen and (max-width:600px) {
+    .live_btn{
+    margin-top: 10%;
+    padding: 5px;
+    }
+    .boxes{
+        font-size: 10px;
+    }
+    .work{
+        margin-top: 20%;
+    }
+    .work_head{
+        width: 15%;
+    }
+    
+}
+
+
+/* contact */
+.contact{
+    margin-top: 20%;
+    margin-left: 15%;
+    padding: 50px;
+    height: 70vh;
+}
+.contact_head{
+    border-bottom: 7px solid rgb(107, 107, 221);
+    font-size: 30px;
+    width: 8%;
+}
+.contact_texts{
+    margin-top: 50px;
+    margin-left: 30px;
+}
+.contact_texts_2{
+    margin-top: 10px;
+}
+.line{
+    width: 75%;
+    height: 1%;
+    background-color: rgb(168, 191, 211);
+}
+h1{
+    margin-left: 20%;
+    font-size: 20px;
+    margin-top: 30px;
+}
+h2{
+    font-size: 20px;
+    margin-left: 15%;   
+}
+h3{
+    margin: 1%  23%;
+}
+@media only screen and (max-width:600px){
+    .contact_head{
+        width: 30%;
+    }
+    .contact_texts{
+        font-size: 12px;
+        margin-left: -30px;
+    }
+    .contact_texts_2{
+        margin-top: -1px;
+    }
+    .line{
+        width: 90%;
+    }
+    h1{
+        font-size: 15px;
+    }
+    h2,h3{
+        font-size: 13px;
+    }
+    h3{
+        margin-left: 25%;
+    }
+}
+
+
+
